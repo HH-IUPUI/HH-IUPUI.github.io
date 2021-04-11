@@ -1,0 +1,94 @@
+        header {
+            grid-area: header;
+            background-color: #CCD9E2;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #141B41;
+            color: white;
+            text-align: center;
+            
+        }
+
+        main {
+            grid-area: main;
+            background-color:#306BAC;
+            
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: #6F9CEB;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #98B9F2;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'nav nav main main main aside'
+                'nav nav main main main aside'
+                'nav nav footer footer footer footer';
+            grid-gap: .5em;
+			
+			max-width: 62em; /* GIVE CONTAINER A WIDTH AND MARGINS IF YOU DO NOT WANT FULL SCREEN */
+			margin: auto;
+        }
+
+
+        ul li {
+            list-style-type: none;
+            margin: inherit;
+        }
+
+
+        /*FIRST BREAK POINT === tablet */
+        @media only screen and (max-width : 900px) {
+            body {
+                background: rgb(150, 150, 212);
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
+
+        /*SECOND BREAK POINT === mobile */
+        @media only screen and (max-width : 600px) {
+
+            body {
+                background: rgb(99, 78, 99);
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'nav nav nav nav nav nav'
+                    'header header header header header header'
+                    'main main main main main main'
+                    'aside aside aside aside aside aside'
+                    'footer footer footer footer footer footer';
+                grid-gap: .5em;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+        }
